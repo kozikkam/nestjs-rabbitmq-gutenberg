@@ -13,9 +13,4 @@ files/2/pg2.rdf
 .
 .
 
-- Go to RabbitMQ under localhost/15672, credentials `user` `user`
-- Create a virtual host called vhost
-- Lastly, restart publisher service `docker-compose restart publisher`
-
-
 API documentation can be found at `localhost:3000/swagger`.
