@@ -39,10 +39,8 @@ export class BookCommandService implements IBookCommandService {
         let authors: string[];
         try {
         authors = ebook['dcterms:creator']
-            .map((el: any) => el['pgterms:agent'])
-            .reduce((acc: any, el: any) => [...acc, ...el ], [])  // flatMap
-            .map((el: any) => el['pgterms:name'])
-            .reduce((acc: any, el: any) => [...acc, ...el ], []); // flatMap
+            .flatMap((el: any) => el['pgterms:agent'])
+            .flatMap((el: any) => el['pgterms:name']);
         } catch (e) {
             // ignore
         }
@@ -78,8 +76,7 @@ export class BookCommandService implements IBookCommandService {
         let subjects: string[];
         try {
             subjects = ebook['dcterms:subject']
-                .map((el: any) => el['rdf:Description'])
-                .reduce((acc: any, el: any) => [...acc, ...el ], []) // flatMap
+                .flatMap((el: any) => el['rdf:Description'])
                 .map((el: any) => el['rdf:value'][0]);
         } catch (e) {
             // ignore

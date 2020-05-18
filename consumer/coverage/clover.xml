@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1589827460940" clover="3.2.0">
-  <project timestamp="1589827460940" name="All files">
-    <metrics statements="46" coveredstatements="46" conditionals="2" coveredconditionals="2" methods="13" coveredmethods="13" elements="61" coveredelements="61" complexity="0" loc="46" ncloc="46" packages="2" files="2" classes="2"/>
+<coverage generated="1589837551581" clover="3.2.0">
+  <project timestamp="1589837551581" name="All files">
+    <metrics statements="43" coveredstatements="43" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="10" elements="55" coveredelements="55" complexity="0" loc="43" ncloc="43" packages="2" files="2" classes="2"/>
     <package name="bookCommandService">
-      <metrics statements="41" coveredstatements="41" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="11"/>
+      <metrics statements="38" coveredstatements="38" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8"/>
       <file name="book-command.service.ts" path="C:\Users\Kamil\Desktop\projects\bibliu_recruitment\consumer\src\api\book\service\bookCommandService\book-command.service.ts">
-        <metrics statements="41" coveredstatements="41" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="11"/>
+        <metrics statements="38" coveredstatements="38" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8"/>
         <line num="1" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
@@ -28,25 +28,22 @@
         <line num="41" count="1" type="stmt"/>
         <line num="42" count="1" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="51" count="1" type="stmt"/>
-        <line num="52" count="1" type="stmt"/>
-        <line num="58" count="1" type="stmt"/>
-        <line num="59" count="1" type="stmt"/>
-        <line num="65" count="1" type="stmt"/>
-        <line num="66" count="1" type="stmt"/>
-        <line num="72" count="1" type="stmt"/>
-        <line num="73" count="1" type="stmt"/>
-        <line num="79" count="1" type="stmt"/>
-        <line num="80" count="1" type="stmt"/>
-        <line num="81" count="4" type="stmt"/>
-        <line num="82" count="4" type="stmt"/>
-        <line num="83" count="4" type="stmt"/>
-        <line num="89" count="1" type="stmt"/>
-        <line num="90" count="1" type="stmt"/>
-        <line num="95" count="1" type="stmt"/>
-        <line num="105" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="78" count="1" type="stmt"/>
+        <line num="79" count="4" type="stmt"/>
+        <line num="80" count="4" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="87" count="1" type="stmt"/>
+        <line num="92" count="1" type="stmt"/>
+        <line num="102" count="1" type="stmt"/>
       </file>
     </package>
     <package name="bookQueryService">
