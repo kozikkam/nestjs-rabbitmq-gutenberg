@@ -1,0 +1,74 @@
+version: '3.1'
+services:
+  publisher:
+    container_name: publisher
+    build:
+      context: ./publisher
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./publisher/:/app/
+      - ./files/:/app/files
+    ports:
+     - 3000:3000
+    environment:
+      PORT: 3000
+      DB_PORT: 5432
+      DB_HOST: postgres
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_DATABASE: postgres
+      AMQP_URL: 'amqp://rabbitmq?connection_attempts=5&retry_delay=5'
+    networks:
+      - network
+    depends_on:
+     - postgres
+     - rabbitmq
+  consumer:
+    container_name: consumer
+    build:
+      context: ./consumer
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./consumer/:/app/
+      - ./files/:/app/files
+    ports:
+      - 3001:3001
+    environment:
+      PORT: 3001
+      DB_PORT: 5432
+      DB_HOST: postgres
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_DATABASE: postgres
+      AMQP_URL: 'amqp://rabbitmq?connection_attempts=5&retry_delay=5'
+    networks:
+      - network
+    depends_on:
+      - postgres
+      - rabbitmq
+  postgres:
+    container_name: postgres
+    image: postgres:11.2-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - network
+    ports:
+      - 5432:5432
+    build:
+      context: .
+      dockerfile: ./db/Dockerfile
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.8.3-management-alpine
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: user
+    networks:
+      - network
+    ports:
+        - 5672:5672
+        - 15672:15672
+
+networks:
+  network: {}
