@@ -9,9 +9,9 @@ services:
       - ./publisher/:/app/
       - ./files/:/app/files
     ports:
-     - 3000:3000
+     - 4001:4001
     environment:
-      PORT: 3000
+      PORT: 4001
       DB_PORT: 5432
       DB_HOST: postgres
       DB_USER: postgres
@@ -32,9 +32,9 @@ services:
       - ./consumer/:/app/
       - ./files/:/app/files
     ports:
-      - 3001:3001
+      - 4000:4000
     environment:
-      PORT: 3001
+      PORT: 4000
       DB_PORT: 5432
       DB_HOST: postgres
       DB_USER: postgres
