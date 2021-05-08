@@ -33,7 +33,7 @@
     "reflect-metadata": "0.1.13",
     "rxjs": "6.4.0",
     "ts-jest": "^26.0.0",
-    "typeorm": "^0.2.22",
+    "typeorm": "^0.2.25",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
