@@ -37,7 +37,7 @@
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
-    "@nestjs/cli": "^7.2.0",
+    "@nestjs/cli": "^9.1.8",
     "@types/dotenv": "^6.1.1",
     "@types/jest": "^25.2.2",
     "@types/node": "^11.15.2",
